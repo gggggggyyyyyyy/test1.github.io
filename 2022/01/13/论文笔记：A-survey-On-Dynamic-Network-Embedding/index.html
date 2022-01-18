@@ -6,13 +6,25 @@
   <meta name="keywords" content=" 论文笔记 ">
   <meta name="description" content="论文笔记：A_survey_On_Dynamic_Network_Embedding | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta name="description" content="论文出处： Machine Learning 2020 Abstract现实世界的网络由各种各样的交互的演化信息，而现有的研究仅仅简单将其描述为静态的网络，没有考虑动态网络上的演化趋势。动态图嵌入在保留网络结构和时序信息的前提下，将节点表示为低维稠密的向量。   根据动态图嵌入基于的技术，对动态图嵌入方法进行划分：    基于矩阵分解的动态图嵌入 基于skip-gram的动态图嵌入 基于自编码器的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文笔记：A_survey_On_Dynamic_Network_Embedding">
+<meta property="og:url" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="论文出处： Machine Learning 2020 Abstract现实世界的网络由各种各样的交互的演化信息，而现有的研究仅仅简单将其描述为静态的网络，没有考虑动态网络上的演化趋势。动态图嵌入在保留网络结构和时序信息的前提下，将节点表示为低维稠密的向量。   根据动态图嵌入基于的技术，对动态图嵌入方法进行划分：    基于矩阵分解的动态图嵌入 基于skip-gram的动态图嵌入 基于自编码器的">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/1.png">
+<meta property="og:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/2.png">
+<meta property="og:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/3.png">
+<meta property="og:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/4.png">
+<meta property="og:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/5.png">
+<meta property="og:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/6.png">
+<meta property="article:published_time" content="2022-01-13T04:25:43.000Z">
+<meta property="article:modified_time" content="2022-01-18T03:43:43.058Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="论文笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/01/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%EF%BC%9AA-survey-On-Dynamic-Network-Embedding/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/1.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -373,7 +385,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-01-18 10:57:51'>2022-01-13 12:25</time>
+            Created At : <time class="date" title='Updated At: 2022-01-18 11:43:43'>2022-01-13 12:25</time>
         
     </div>
     <div class="article-meta">
@@ -395,7 +407,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8C%96%E8%A1%A8%E7%A4%BA"><span class="toc-text">问题的形式化表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="toc-text">问题定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AE%B0"><span class="toc-text">标记</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-text">分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E7%9A%84%E5%8A%A8%E6%80%81%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于矩阵分解的动态图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8Eskip-gram%E7%9A%84%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于skip-gram的图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8%E7%9A%84%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于自编码器的图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于神经网络的图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%B5%8C%E5%85%A5%E6%96%B9%E6%B3%95"><span class="toc-text">其他嵌入方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Application"><span class="toc-text">Application</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%88%86%E7%B1%BB"><span class="toc-text">节点分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E9%A2%84%E6%B5%8B"><span class="toc-text">链路预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E8%81%9A%E7%B1%BB"><span class="toc-text">节点聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">网络可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91"><span class="toc-text">未来研究方向</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="toc-text">动态嵌入模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">大规模网络的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%9E%84%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">异构网络中的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%B1%9E%E6%80%A7%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">基于属性网络的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">面向任务的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%B5%8C%E5%85%A5%E7%A9%BA%E9%97%B4"><span class="toc-text">更多的嵌入空间</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Problem-Defination"><span class="toc-text">Problem Defination</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="toc-text">问题定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E8%AE%B0"><span class="toc-text">标记</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Classification"><span class="toc-text">Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E7%9A%84%E5%8A%A8%E6%80%81%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于矩阵分解的动态图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8Eskip-gram%E7%9A%84%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于skip-gram的图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8%E7%9A%84%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于自编码器的图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E5%9B%BE%E5%B5%8C%E5%85%A5"><span class="toc-text">基于神经网络的图嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%B5%8C%E5%85%A5%E6%96%B9%E6%B3%95"><span class="toc-text">其他嵌入方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Application"><span class="toc-text">Application</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%88%86%E7%B1%BB"><span class="toc-text">节点分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E9%A2%84%E6%B5%8B"><span class="toc-text">链路预测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E8%81%9A%E7%B1%BB"><span class="toc-text">节点聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">网络可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Future-Work"><span class="toc-text">Future Work</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="toc-text">动态嵌入模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E8%A7%84%E6%A8%A1%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">大规模网络的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%9E%84%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">异构网络中的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%B1%9E%E6%80%A7%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">基于属性网络的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%8A%A8%E6%80%81%E7%BD%91%E7%BB%9C%E5%B5%8C%E5%85%A5"><span class="toc-text">面向任务的动态网络嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E5%A4%9A%E7%9A%84%E5%B5%8C%E5%85%A5%E7%A9%BA%E9%97%B4"><span class="toc-text">更多的嵌入空间</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -412,7 +424,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>论文出处： Machine Learning 2020</p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>现实世界的网络由各种各样的交互的演化信息，而现有的研究仅仅简单将其描述为静态的网络，没有考虑动态网络上的演化趋势。动态图嵌入在保留网络结构和时序信息的前提下，将节点表示为低维稠密的向量。  </p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>现实世界的网络由各种各样的交互的演化信息，而现有的研究仅仅简单将其描述为静态的网络，没有考虑动态网络上的演化趋势。动态图嵌入在保留网络结构和时序信息的前提下，将节点表示为低维稠密的向量。  </p>
 <p>根据动态图嵌入基于的技术，对动态图嵌入方法进行划分：  </p>
 <ol>
 <li>基于矩阵分解的动态图嵌入</li>
@@ -422,7 +434,7 @@
 <li>其他动态图嵌入方式</li>
 </ol>
 <p>现有算法面临的挑战：如动态嵌入模型、大规模动态网络、异构动态网络、动态属性网络、面向任务的动态网络嵌入以及更多的嵌入空间。</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>图结构网络是复杂系统常用的载体，eg: PPI、SN、语义网络、犯罪网络。由于现实世界中的网络是不断演化的，单纯的利用静态网络进行嵌入表示会增加时空开销，因为一旦网络变化就需要重新进行训练。   </p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>图结构网络是复杂系统常用的载体，eg: PPI、SN、语义网络、犯罪网络。由于现实世界中的网络是不断演化的，单纯的利用静态网络进行嵌入表示会增加时空开销，因为一旦网络变化就需要重新进行训练。   </p>
 <ol>
 <li>DeepWalk：将静态网络嵌入作为序列建模问题。该方法通过随机游走获取sequence，然后将其喂入skip-gram来预测输入节点的上下文。</li>
 <li>node2vec：基于DeepWalk发展而来，nodec2vec将DFS、BFS的游走策略进行组合，来更加灵活的学习网络结构。</li>
@@ -438,9 +450,9 @@
 <p>从动态网络嵌入模型和预处理过程两个方面构建了动态网络嵌入内容体系。具体来说，需要将具有属性和标签的网络数据集预处理成统一的线性数组，然后结合时间序列进行网络动态演化生成归一化矩阵。然后，通过优化算法更新归一化矩阵来构造网络表示。<br><img src="%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/1.png"></p>
 <p>上图中5类方法各自有优缺点，基于NN的方法计算量大，空间开销大。  </p>
 <p>在第2节中，我们介绍了动态网络嵌入策略中常用的问题定义，然后给出了动态网络嵌入策略的形式化定义。在第3节中，详细阐述了不同的动态网络嵌入技术。第4节将介绍动态网络嵌入所支持的应用程序。在此基础上，第5部分总结了本文所面临的挑战，并指出了未来可能的研究方向。在调查的最后，我们在第6节总结了本文.  </p>
-<h2 id="问题的形式化表示"><a href="#问题的形式化表示" class="headerlink" title="问题的形式化表示"></a>问题的形式化表示</h2><h3 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h3><p>定义1： 网络 G=(V, E)<br>定义2： 静态网络 G=(V, E),节点和边在所有时间上保持不变。<br>定义3： 动态网络G=(v, e), 可以切割为不同的snapshot,{G1, … ,GT},GT表示T时刻的snapshot.其中GT=(Vt, Et).   </p>
+<h1 id="Problem-Defination"><a href="#Problem-Defination" class="headerlink" title="Problem Defination"></a>Problem Defination</h1><h2 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h2><p>定义1： 网络 G=(V, E)<br>定义2： 静态网络 G=(V, E),节点和边在所有时间上保持不变。<br>定义3： 动态网络G=(v, e), 可以切割为不同的snapshot,{G1, … ,GT},GT表示T时刻的snapshot.其中GT=(Vt, Et).   </p>
 <h2 id="标记"><a href="#标记" class="headerlink" title="标记"></a>标记</h2><p><img src="%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/2.png"></p>
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>动态网络是表示为快照还是用时间戳标记的连续时间网络。根据该策略，我们将动态网络嵌入分为五大类:基于特征值分解的嵌入、基于跳跃图的嵌入、基于自动编码器的嵌入、基于图卷积的嵌入等。  </p>
+<h1 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h1><p>动态网络是表示为快照还是用时间戳标记的连续时间网络。根据该策略，我们将动态网络嵌入分为五大类:基于特征值分解的嵌入、基于跳跃图的嵌入、基于自动编码器的嵌入、基于图卷积的嵌入等。  </p>
 <h2 id="基于矩阵分解的动态图嵌入"><a href="#基于矩阵分解的动态图嵌入" class="headerlink" title="基于矩阵分解的动态图嵌入"></a>基于矩阵分解的动态图嵌入</h2><p><img src="%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/3.png"></p>
 <p>传统但有效的嵌入方法是在复杂网络中通过奇异值分解对邻接矩阵进行分解，通过特征分解对属性矩阵进行分解，从而构造每个节点的嵌入表示。从矩阵分解的角度来看，网络的动态演化相当于原始矩阵的不断变化，其中网络嵌入根据矩阵的摄动理论进行更新。  </p>
 <p><img src="%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/4.png"><br>动态网络嵌入中特征值分解的一个实例。在快照t时，模型通过与网络结构A的结合产生频谱嵌入结果，得到静态嵌入结果Y。之后，在快照t + 1处，拓扑变化∆A表示网络结构的动态信息。该模型结合矩阵摄动理论，对新的嵌入Y T进行更新。   </p>
@@ -482,7 +494,7 @@
 <h2 id="链路预测"><a href="#链路预测" class="headerlink" title="链路预测"></a>链路预测</h2><p>链路预测任务的目标是预测两个节点之间是否存在边，可以评估嵌入方法在保持显式网络拓扑结构方面的性能。动态网络嵌入中采用的链路预测分为三个步骤。首先，学习节点的嵌入表示。然后，将数据集划分为训练集和测试集。对于训练集和测试集中的任意一对节点，生成一个标签，记录这两个节点是否有连接。最后，在测试集上进行链接预测实验。AUC和MAP测度作为评价指标。MAP的目标是测量模型的召回率和精度，可以反映整体表现。与AUC相比，MAP考虑的是返回项的性能排名。</p>
 <h2 id="节点聚类"><a href="#节点聚类" class="headerlink" title="节点聚类"></a>节点聚类</h2><p>节点聚类是一种无监督任务，其目标是将一个网络划分为多个簇，属于同一簇的节点具有更多的相似性。与节点分类类似，节点聚类是为了学习节点的类别信息。在通过嵌入算法得到节点表示后，实际采用了一些典型的聚类方法进行节点聚类，如K-means。通常使用归一化互信息(NMI)评价网络嵌入算法的聚类性能。(聚类区别于分类，聚类仅仅知道分为了几类，并不知道每个类别的label信息，而分类知道每个类别的label信息。)</p>
 <h2 id="网络可视化"><a href="#网络可视化" class="headerlink" title="网络可视化"></a>网络可视化</h2><p>节点的嵌入表示被用作可视化工具的输入，如t-SNE[32]。通过嵌入算法生成节点表示法后，t-SNE首先将d维节点表示法映射到二维空间中，可视化结果显示在二维空间中。网络可视化是对带有标签的数据集进行的。在二维空间中，标签不同的节点用不同的颜色进行标记。由于网络嵌入保留了网络的固有结构，可视化结果直接反映了在二维空间中同一簇内的节点具有更多的相似特征。</p>
-<h1 id="未来研究方向"><a href="#未来研究方向" class="headerlink" title="未来研究方向"></a>未来研究方向</h1><p>由于网络是随时间演化的，上述模型仅局限于两种模式，即快照模式和连续时间模式，难以适应更复杂的情况。因此，本部分讨论了未来工作的几个有前途的研究方向。</p>
+<h1 id="Future-Work"><a href="#Future-Work" class="headerlink" title="Future Work"></a>Future Work</h1><p>由于网络是随时间演化的，上述模型仅局限于两种模式，即快照模式和连续时间模式，难以适应更复杂的情况。因此，本部分讨论了未来工作的几个有前途的研究方向。</p>
 <h2 id="动态嵌入模型"><a href="#动态嵌入模型" class="headerlink" title="动态嵌入模型"></a>动态嵌入模型</h2><p>考虑到网络的实时演化，实现网络嵌入执行的工作很少。例如，如果在网络中添加或删除一些边，现有的方法需要对原有的网络进行重新处理，然后进行网络嵌入，耗时较长。为了在网络状态变化时有效地更新嵌入表示，动态嵌入模型是非常理想的。</p>
 <h2 id="大规模网络的动态网络嵌入"><a href="#大规模网络的动态网络嵌入" class="headerlink" title="大规模网络的动态网络嵌入"></a>大规模网络的动态网络嵌入</h2><p>对于网络嵌入，Tang等人[48]提出了LINE来分析大规模的复杂网络。但LINE不适用于动态网络。由于在动态网络中进行网络演化的复杂性，现有的动态网络嵌入方法不能适用于更复杂的真实网络。根据上述调查，动态网络可以表示为快照或时间戳标记的连续时间网络。快照或时间戳的数量越多，网络演化的复杂性就越高。因此，可以从降低网络演化的复杂性或改进嵌入模型两方面来提高动态网络嵌入的效率。综上所述，大规模动态网络嵌入是一个难以实现的研究难点。</p>
 <h2 id="异构网络中的动态网络嵌入"><a href="#异构网络中的动态网络嵌入" class="headerlink" title="异构网络中的动态网络嵌入"></a>异构网络中的动态网络嵌入</h2><p>虽然目前的研究主要集中在动态网络嵌入上，但现有的方法主要是基于单一类型节点和边缘的同构网络。然而，许多现实世界的网络都是异构网络，其中存在几种类型的节点和边。异构网络的动态嵌入需要考虑网络随时间变化的节点类型和边缘类型。此外，如果从原始的异构网络中提取结构和性质，则在网络演化的过程中要尽可能地保留所提取的结构和性质。探索异构网络中的动态网络嵌入是一个有趣的研究方向。</p>
